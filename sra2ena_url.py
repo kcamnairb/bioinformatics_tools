@@ -1,5 +1,5 @@
 import argparse
-parser = argparse.ArgumentParser(description='''Takes SRA numbers and ouputs the url to download them from ENA.
+parser = argparse.ArgumentParser(description='''Takes SRA numbers (beggining with "SRR") and ouputs the url to download them from ENA.
 Conversion done according to http://www.ebi.ac.uk/ena/browse/read-download''')
 parser.add_argument('sras', nargs='+')
 args = parser.parse_args()
