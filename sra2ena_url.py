@@ -1,6 +1,9 @@
 import argparse
 parser = argparse.ArgumentParser(description='''Takes SRA numbers (beggining with "SRR") and ouputs the url to download them from ENA.
-Conversion done according to http://www.ebi.ac.uk/ena/browse/read-download''')
+Conversion done according to http://www.ebi.ac.uk/ena/browse/read-download
+
+Example: "for sra in SRR1169892 SRR1170553 SRR1170555 SRR1170556 ; do wget -r -nH -nd -np -R index.html*  $(python3 ~/python/scripts/sra2ena_url.py $sra") ; done
+''')
 parser.add_argument('sras', nargs='+')
 args = parser.parse_args()
 sra = args.sras
